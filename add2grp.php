@@ -8,8 +8,8 @@ if ($conn->connect_error)
  {
     die("Connection failed: " . $conn->connect_error);
 }
- $myemail=$_COOKIE['email'];
- $gid=$_COOKIE['grpid'];
+ $myemail=$_COOKIE['Email'];
+ $gid=$_POST['groupid'];
 $email=$_POST['email'];
 
 $sql="SELECT groupname,groupid from groupsdata where groupid='$gid'";
