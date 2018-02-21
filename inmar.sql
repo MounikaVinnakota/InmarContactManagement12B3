@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2018 at 07:43 PM
+-- Generation Time: Feb 21, 2018 at 06:27 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -42,8 +42,10 @@ CREATE TABLE `contactslist` (
 --
 
 INSERT INTO `contactslist` (`name`, `cemail`, `phoneno`, `ownermail`, `groupname`, `groupid`) VALUES
-('srinivas', 'srinu@inmar.com', '7894561230', '', 'NULL', 0),
-('ahmed', 'ahmed@inmar.com', '7997406467', '', 'NULL', 0);
+('ahmed', 'ahmed@inmar.com', '7997406467', 'mouni@inmar.com', 'pvpsit', 1000),
+('srinivas', 'srinu@inmar.com', '7674911756', 'mouni@inmar.com', 'vrsec', 4567),
+('amani', 'amani@inmar.com', '9000974529', 'mouni@inmar.com', 'NULL', 0),
+('lakshmi', 'lakshmi@inmar.com', '9666854097', 'mouni@inmar.com', 'NULL', 0);
 
 -- --------------------------------------------------------
 
@@ -62,9 +64,8 @@ CREATE TABLE `groupsdata` (
 --
 
 INSERT INTO `groupsdata` (`groupname`, `groupid`, `ownermail`) VALUES
-('pvpsit', '1000', ''),
-('inmar', '1234', ''),
-('vrsec', '4567', '');
+('pvpsit', '1000', 'mouni@inmar.com'),
+('vrsec', '4567', 'mouni@inmar.com');
 
 -- --------------------------------------------------------
 
