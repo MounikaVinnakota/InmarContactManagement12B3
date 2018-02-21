@@ -35,7 +35,7 @@ else {
 echo "<br>$mail2   $passwd2";
    if(($mail1==$mail2)&&($passwd1==$passwd2))
    {
-       setcookie("Email",$mail2, time() + (86400 * 30), "/");
+       setcookie("Email","$mail2", time() + (86400 * 30), "/");
        setcookie("test2","x2", time() + (86400 * 30), "/");
        //echo "<h1>This is fine</h1>";
        header("Location:index.php");
