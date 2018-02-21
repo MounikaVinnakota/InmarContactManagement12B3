@@ -8,7 +8,7 @@ if ($conn->connect_error)
  {
     die("Connection failed: " . $conn->connect_error);
 }
- $myemail=$_COOKIE['email'];
+ $myemail=$_COOKIE['Email'];
 $email=$_POST['email'];
 
 $sql = "DELETE FROM contactslist WHERE cemail='$email'";
