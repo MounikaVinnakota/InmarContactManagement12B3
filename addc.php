@@ -6,7 +6,7 @@ if ($conn->connect_error)
  {
     die("Connection failed: " . $conn->connect_error);
 }
- $myemail=$_COOKIE['email'];
+ $myemail=$_COOKIE['Email'];
 $name=$_POST['name'];
 $email=$_POST['cemail'];
 $phone=$_POST['phone'];
