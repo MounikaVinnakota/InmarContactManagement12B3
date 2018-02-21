@@ -76,6 +76,6 @@ Password - *It123
 
 * **Vinnakota Mounika**
 
-* **Email:mounikavinnakota1711@gmail.com
+* Email:mounikavinnakota1711@gmail.com
 
-* **Contact:7674911756
+* Contact:7674911756
