@@ -1,5 +1,8 @@
 # Inmar Contact Management System
- This project is all about managing contacts for Inmar employees
+ 
+
+
+This project is all about managing contacts for Inmar employees
 
 ## Getting Started
 
@@ -60,19 +63,19 @@ What things you need to install the software
 
 * After performing necessary operations the person can logout from the web application by logout in the dash board page which will redirect the person to a index.html page that is home page
  
-**If you need to login to the application without signing up just to check the working of the application_
+**If you need to login to the application without signing up just to check the working of the application
 
-_Login Page_
+Login Page
 ```
-_User Email - mouni@inmar.com_
+User Email - mouni@inmar.com
 
-_Password - *It123_
+Password - *It123
 ```
 
 ## Authors
 
-* -**Vinnakota Mounika**-
+* **Vinnakota Mounika**
 
-**Email:**-mounikavinnakota1711@gmail.com-
+**Email:**mounikavinnakota1711@gmail.com
 
-**Contact:**-7674911756-
+**Contact:**7674911756
