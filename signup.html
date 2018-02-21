@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Inmar CMS</title>
+
+<link rel="stylesheet" href="style3.css">
+<script type="text/javascript" src="angular.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript" src="app.js"></script>
+</head>
+
+<body class="container" ng-app="myApp" ng-controller="maincntrl">
+<div class="row" >
+<h2 class="text-center"></h2>
+<div class="col-md-offset-1 col-md-6 col-sm-12" >
+<div class="login">
+<h2>Registration Form</h2>
+<!--Code of form started-->
+<form class="form-horizontal" name="frm" action="registration.php" method="post" novalidate>
+<!--Code to validate name is written here-->
+<div class="form-group" >
+<label id="label" class="control-label">Name:</label>
+<input type="text" class="form-control" name="name" ng-model="name" placeholder="Enter Name" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z]{1,20}$/"autocomplete="off" required />
+<span class="msg" ng-show="frm.name.$invalid && !frm.name.$pristine">Enter valid Name.</span>
+<span class="msg" ng-show="frm.name.$dirty && frm.name.$invalid">Enter Name</span>
+</div>
+
+
+<!--Code to validate email address is written here-->
+<div class="form-group">
+<label id="label" class="control-label">Email:</label>
+<input type="email" class="form-control" ng-model="email" name="email" placeholder="Enter Email Address" ng-pattern="/^[A-Za-z_]\w+@inmar\.com$/" autocomplete="off" required>
+<span class="msg" ng-show="frm.email.$dirty && frm.email.$invalid">Email Address is not valid</span>
+</div>
+
+<!--Code to validate password is written here-->
+<div class="form-group">
+<label id="label" class="control-label">Password:</label>
+<input type="password" class="form-control" ng-model="pass" name="pass" placeholder="Enter Password" ng-pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[*&_!@.]).{5,}$/" autocomplete="off" ng-minlength="5" ng-maxlength="12" required>
+<span class="msg" ng-show="frm.pass.$dirty && frm.pass.$error.minlength">password must contain atleast 5 charecters</span>
+<span class="msg" ng-show="frm.pass.$dirty && frm.pass.$error.maxlength">max-length of password reached</span>
+<span class="msg" ng-show="frm.pass.$invalid && !frm.pass.$pristine">password must contain at least a special character, a number, a uppercase letter and lowercase letter</span>
+</div>
+
+
+<!--Code to validate gender field-->
+<div class="form-group">
+<label id="label" >Gender:</label>&nbsp;&nbsp;&nbsp;
+Male&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" ng-model="gender" value="male" required>
+&nbsp;&nbsp;&nbsp;&nbsp Female <input type="radio" name="gender" ng-model="gender" value="female" required></br>
+<span class="msg" ng-show="frm.gender.$error.required">select any gender</span>
+</div>
+
+<!--Code to validate aadhar field-->
+<div class="form-group" >
+<label id="label" class="control-label">Aadhar Pin:</label>
+<input type="text" class="form-control" name="aadhar" ng-model="aadhar" placeholder="Enter Aadhar Number" autocomplete="off" required />
+</div>
+<!--Code to validate phonenumber field-->
+<div class="form-group" >
+<label id="label" class="control-label">Phone Number</label>
+<input type="text" class="form-control" name="phone" ng-model="phone" placeholder="Enter Phone Number" maxlength="10" ng-pattern="/^[6-9][0-9]{9}$/" autocomplete="off" required />
+<span class="msg" ng-show="frm.phone.$invalid && !frm.phone.$pristine && frm.phone.$error.pattern">Enter valid Mobile NO</span>
+</div>
+
+
+
+<!--Code to disable submit button is written here-->
+<div class="form-group">
+<button  type="submit"    ng-disabled="frm.$invalid">Submit </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>

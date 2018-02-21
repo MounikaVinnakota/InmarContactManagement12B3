@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Inmar CMS</title>
+
+<link rel="stylesheet" href="style3.css">
+<script type="text/javascript" src="angular.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript" src="app.js"></script>
+</head>
+
+<body class="container" ng-app="myApp" ng-controller="maincntrl">
+<div class="row" >
+<h2 class="text-center"></h2>
+<div class="col-md-offset-1 col-md-6 col-sm-12" >
+<div class="login">
+<h2>Create Group</h2>
+<!--Code of form started-->
+<form class="form-horizontal" name="frm" action="crgroup.php" method="post" novalidate>
+<!--Code to validate name is written here-->
+<div class="form-group" >
+<label id="label" class="control-label">Group Name:</label>
+<input type="text" class="form-control" name="gname" ng-model="gname" placeholder="Enter Group Name" autocomplete="off" required />
+<span class="msg" ng-show="frm.gname.$invalid && !frm.gname.$pristine">Enter Group Name.</span>
+</div>
+
+
+<!--Code to validate email address is written here-->
+<div class="form-group">
+<label id="label" class="control-label">Group Id:</label>
+<input type="text" class="form-control" ng-model="gid" name="gid" placeholder="Enter Group Id"  autocomplete="off" required>
+</div>
+
+
+<!--Code to disable submit button is written here-->
+<div class="form-group">
+<button  type="submit"  ng-disabled="frm.$invalid">Create Group</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>

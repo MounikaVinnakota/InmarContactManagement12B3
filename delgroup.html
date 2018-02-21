@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Inmar CMS</title>
+
+<link rel="stylesheet" href="style3.css">
+<script type="text/javascript" src="angular.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript" src="app.js"></script>
+</head>
+
+<body class="container" ng-app="myApp" ng-controller="maincntrl">
+<div class="row" >
+<h2 class="text-center"></h2>
+<div class="col-md-offset-1 col-md-6 col-sm-12" >
+<div class="login">
+<h2>Delete Group</h2>
+<!--Code of form started-->
+<form class="form-horizontal" name="frm" action="delgroup.php" method="post" novalidate>
+<div class="form-group">
+<label id="label" class="control-label">Group Id:</label>
+<input type="text" class="form-control" ng-model="gid" name="gid" placeholder="Enter Group Id"  autocomplete="off" required>
+</div>
+<!--Code to disable submit button is written here-->
+<div class="form-group">
+<button  type="submit" ng-disabled="frm.$invalid">Delete Group</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>

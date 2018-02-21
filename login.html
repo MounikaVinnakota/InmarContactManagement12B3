@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Inmar CMS</title>
+
+<link rel="stylesheet" href="style3.css">
+<script type="text/javascript" src="angular.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript" src="app.js"></script>
+</head>
+
+<body class="container">
+<div class="row" ng-app="myApp" ng-controller="maincntrl">
+<h2 class="text-center"></h2>
+<div class="col-md-offset-1 col-md-6 col-sm-12" >
+<div class="login">
+<h2>Login Form</h2>
+<!--Code of form started-->
+<form class="form-horizontal" name="frm" action="login.php" method="post" novalidate>
+
+<!--Code to validate email address is written here-->
+<div class="form-group">
+<label id="label" class="control-label">Email:</label>
+<input type="email" class="form-control" ng-model="email" name="email" ng-pattern="/^[A-Za-z_]\w+@inmar\.com$/" placeholder="Enter Email Address" autocomplete="off" required>
+<span class="msg" ng-show="frm.email.$dirty && frm.email.$invalid">Email Address is not valid</span>
+</div>
+
+<!--Code to validate password is written here-->
+<div class="form-group">
+<label id="label" class="control-label">Password:</label>
+<input type="password" class="form-control" ng-model="pass" name="pass" placeholder="Enter Password" ng-pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[*&_!@.]).{5,}$/" autocomplete="off" ng-minlength="5" ng-maxlength="12" required>
+<span class="msg" ng-show="frm.pass.$dirty && frm.pass.$error.minlength">password must contain atleast 5 charecters</span>
+<span class="msg" ng-show="frm.pass.$dirty && frm.pass.$error.maxlength">max-length of password reached</span>
+<span class="msg" ng-show="frm.pass.$invalid && !frm.pass.$pristine">password must contain at least a special character, a number, a uppercase letter and lowercase letter</span>
+</div>
+<!--Code to disable submit button is written here-->
+<div class="form-group">
+<button  type="submit"  ng-disabled="frm.$invalid">Submit </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>

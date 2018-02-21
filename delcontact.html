@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Inmar CMS</title>
+
+<link rel="stylesheet" href="style3.css">
+<script type="text/javascript" src="angular.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript" src="app.js"></script>
+</head>
+
+<body class="container" ng-app="myApp" ng-controller="maincntrl">
+<div class="row" >
+<h2 class="text-center"></h2>
+<div class="col-md-offset-1 col-md-6 col-sm-12" >
+<div class="login">
+<h2>Delete Contact</h2>
+<!--Code of form started-->
+<form class="form-horizontal" name="frm" action="delcon.php" method="post" novalidate>
+
+<!--Code to validate email address is written here-->
+<div class="form-group">
+<label id="label" class="control-label">Email:</label>
+<input type="email" class="form-control" ng-model="email" name="email" placeholder="Enter Email Address" ng-pattern="/^[A-Za-z_]\w+@inmar\.com$/" autocomplete="off" required>
+<span class="msg" ng-show="frm.email.$dirty && frm.email.$invalid">Email Address is not valid</span>
+</div>
+
+
+<!--Code to disable submit button is written here-->
+<div class="form-group">
+<button  type="submit"  ng-disabled="frm.$invalid">Delete</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>
