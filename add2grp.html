@@ -16,6 +16,11 @@
 <h2>Add To Group</h2>
 <!--Code of form started-->
 <form class="form-horizontal" name="frm" action="add2grp.php" method="post" novalidate>
+ <!--Code to validate group id-->
+<div class="form-group">
+<label id="label" class="control-label">Group Id:</label>
+<input type="text" class="form-control" ng-model="groupid" name="groupid" placeholder="Enter Group Id"  autocomplete="off" required>
+</div>
 <!--Code to validate email address is written here-->
 <div class="form-group">
 <label id="label" class="control-label">Email:</label>
