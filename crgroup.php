@@ -8,7 +8,7 @@ if ($conn->connect_error)
  {
     die("Connection failed: " . $conn->connect_error);
 }
- $myemail=$_COOKIE['email'];
+ $myemail=$_COOKIE['Email'];
 $gname=$_POST['gname'];
 $gid=$_POST['gid'];
 
