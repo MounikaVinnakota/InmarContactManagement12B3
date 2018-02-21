@@ -35,7 +35,7 @@ function fu(){
 
 
 $conn =mysqli_connect('localhost','root','','inmar');
-$myemail=$_COOKIE['email'];
+$myemail=$_COOKIE['Email'];
 
 if ($conn->connect_error)
  {
