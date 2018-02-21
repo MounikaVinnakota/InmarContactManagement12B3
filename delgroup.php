@@ -8,8 +8,8 @@ if ($conn->connect_error)
  {
     die("Connection failed: " . $conn->connect_error);
 }
- $myemail=$_COOKIE['email'];
-$gid=$_POST['gid'];
+ $myemail=$_COOKIE['Email'];
+$gid=$_POST['groupid'];
 
 $sql = "DELETE FROM groupsdata WHERE groupid='$gid'";
 
